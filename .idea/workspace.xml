@@ -74,12 +74,12 @@
       <module name="testJunit3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.kiady.*" />
+          <option name="PATTERN" value="kiady.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.kiady" />
-      <option name="MAIN_CLASS_NAME" value="test.kiady.CalculsTest" />
+      <option name="PACKAGE_NAME" value="kiady" />
+      <option name="MAIN_CLASS_NAME" value="kiady.CalculsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />

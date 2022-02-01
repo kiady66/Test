@@ -1,8 +1,8 @@
-package test.kiady;
+package kiady;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import Calculs;
+import kiady.Calculs;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
