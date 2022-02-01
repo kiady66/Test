@@ -1,3 +1,4 @@
+package kiady;
 
 public class Calculs
 {

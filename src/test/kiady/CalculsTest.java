@@ -1,7 +1,8 @@
-
+package test.kiady;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import kiady.Calculs;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -53,6 +54,13 @@ class CalculsTest {
 	 */
 	@Test
 	void testAdditionner() {
+		if(c1.additionner() != 3)
+		{
+			fail("Methode additionner non conforme 2+1=3 ne fonctionne pas.");
+		}
+
+		// Est ce que (2 == 42) ? non donc : test en Erreur
+		assertEquals(c1.additionner(), 3);
 	}
 
 	/**
@@ -60,7 +68,13 @@ class CalculsTest {
 	 */
 	@Test
 	void testDiviser() {
-		fail("Not yet implemented");
+		if(c1.diviser() != 0)
+		{
+			fail("Methode diviser non conforme 2/1=0 ne fonctionne pas.");
+		}
+
+		// Est ce que (2 == 42) ? non donc : test en Erreur
+		assertEquals(c1.diviser(), 0);
 	}
 
 	/**
@@ -68,7 +82,13 @@ class CalculsTest {
 	 */
 	@Test
 	void testSoustraire() {
-		fail("Not yet implemented");
+		if(c1.soustraire() != -1)
+		{
+			fail("Methode soustraire non conforme 2-1=1 ne fonctionne pas.");
+		}
+
+		// Est ce que (2 == 42) ? non donc : test en Erreur
+		assertEquals(c1.soustraire(), -1);
 	}
 
 }
