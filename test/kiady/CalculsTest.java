@@ -70,7 +70,7 @@ class CalculsTest {
 	void testDiviser() {
 		if(c1.diviser() != 0)
 		{
-			fail("Methode diviser non conforme 2/1=0 ne fonctionne pas.");
+			fail("Methode diviser non conforme 1/2=0 ne fonctionne pas.");
 		}
 
 		// Est ce que (2 == 42) ? non donc : test en Erreur

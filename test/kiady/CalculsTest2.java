@@ -35,6 +35,15 @@ class CalculsTest2 {
         );
     }
 
+	static Stream<Arguments> chargerJeuDeTestDivision() throws Throwable
+	{
+		return Stream.of(
+				Arguments.of(8,2,4), // appellera : testDiviser
+				Arguments.of(3,2,3),
+				Arguments.of(96,6,16)
+		);
+	}
+
 	@ParameterizedTest(name="Multiplication numéro {index}: nombre1={0}, nombre2={1}, résultat attendu = {2}")
 	@MethodSource("chargerJeuDeTest")
 	void testMultiplier(int firstNumber, int secondNumber, int expectedResult) 
@@ -47,5 +56,15 @@ class CalculsTest2 {
 	        String n = null;
 	        assertNull(n);
 	}
+
+	@ParameterizedTest(name="Division numéro {index}: nombre1={0}, nombre2={1}, résultat attendu = {2}")
+	@MethodSource("chargerJeuDeTestDivision")
+	void testDiviser(int firstNumber, int secondNumber, int expectedResult)
+	{
+		// Partie paramétrée
+		Calculs monCal = new Calculs(firstNumber, secondNumber);
+		assertEquals(expectedResult, monCal.diviser(), "test en échec pour " + firstNumber + " * " + secondNumber + " != " + expectedResult);
+	}
+
 
 }
