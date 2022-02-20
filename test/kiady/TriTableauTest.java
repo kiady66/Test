@@ -74,7 +74,7 @@ public class TriTableauTest {
     {
         // Partie paramétrée
         TriTableau monTri = new TriTableau();
-        monTri.triCroissant(firstTab);
+        monTri.triDecroissant(firstTab);
         assertEquals(expectedResult, firstTab, "test en échec pour le tri de " + displayTab(firstTab) + " != " + displayTab(expectedResult));
     }
 
