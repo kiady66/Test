@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78d4eece-a6eb-431b-93a9-0e1ea0d470cc" name="Changes" comment="Add test for trier function">
+    <list default="true" id="78d4eece-a6eb-431b-93a9-0e1ea0d470cc" name="Changes" comment="Fix test tridecroissant">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/kiady/CalculsTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/kiady/CalculsTest2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/kiady/TriTableauTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/kiady/TriTableauTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +67,7 @@
       <recent name="kiady" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in testJunit3 (1)">
+  <component name="RunManager" selected="JUnit.All in testJunit3">
     <configuration name="All in testJunit3 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testJunit3" />
       <option name="PACKAGE_NAME" value="" />
@@ -115,9 +117,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in testJunit3" />
         <item itemvalue="JUnit.All in testJunit3 (1)" />
         <item itemvalue="JUnit.CalculsTest" />
-        <item itemvalue="JUnit.All in testJunit3" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +134,7 @@
       <workItem from="1643722236814" duration="4819000" />
       <workItem from="1644420100677" duration="1430000" />
       <workItem from="1644836289561" duration="881000" />
-      <workItem from="1645292810584" duration="7888000" />
+      <workItem from="1645292810584" duration="8758000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1643722772619</created>
@@ -204,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645353619078</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fix test tridecroissant">
+      <created>1645353826708</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1645353826708</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +234,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="TriTableau Test" />
     <MESSAGE value="Add test for trier function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test for trier function" />
+    <MESSAGE value="Fix test tridecroissant" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix test tridecroissant" />
   </component>
 </project>

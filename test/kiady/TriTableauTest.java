@@ -3,6 +3,7 @@ package kiady;
 import static org.junit.jupiter.api.Assertions.*;
 
 
+import java.io.IOException;
 import java.util.stream.Stream;
 
 import kiady.Calculs;
@@ -48,16 +49,6 @@ public class TriTableauTest {
         );
     }
 
-    @ParameterizedTest(name="TriDécroissant numéro {index}: nombre1={0}, résultat attendu = {1}")
-    @MethodSource("chargerJeuDeTestTriDecroissant")
-    void testTrieDecroissant(int firstTab[], int expectedResult[])
-    {
-        // Partie paramétrée
-        TriTableau monTri = new TriTableau();
-        monTri.triCroissant(firstTab);
-        assertEquals(expectedResult, firstTab, "test en échec pour le tri de " + displayTab(firstTab) + " != " + displayTab(expectedResult));
-    }
-
     @ParameterizedTest(name="TriCroissant numéro {index}: nombre1={0}, résultat attendu = {1}")
     @MethodSource("chargerJeuDeTestTriCroissant")
     void testTrieCroissant(int firstTab[], int expectedResult[])
@@ -65,17 +56,26 @@ public class TriTableauTest {
         // Partie paramétrée
         TriTableau monTri = new TriTableau();
         monTri.triCroissant(firstTab);
-        assertEquals(expectedResult, firstTab, "test en échec pour le tri de " + displayTab(firstTab) + " != " + displayTab(expectedResult));
+        assertArrayEquals(expectedResult, firstTab, "test en échec pour le tri de " + displayTab(firstTab) + " != " + displayTab(expectedResult));
     }
 
-    @ParameterizedTest(name="Trier numéro {index}: nombre1={0}, résultat attendu = {1}")
-    @MethodSource("chargerJeuDeTestTrier")
-    void testTrier(int firstTab[], int expectedResult[])
+    @ParameterizedTest(name="TriDécroissant numéro {index}: nombre1={0}, résultat attendu = {1}")
+    @MethodSource("chargerJeuDeTestTriDecroissant")
+    void testTrieDecroissant(int firstTab[], int expectedResult[])
     {
         // Partie paramétrée
         TriTableau monTri = new TriTableau();
         monTri.triDecroissant(firstTab);
-        assertEquals(expectedResult, firstTab, "test en échec pour le tri de " + displayTab(firstTab) + " != " + displayTab(expectedResult));
+        assertArrayEquals(expectedResult, firstTab, "test en échec pour le tri de " + displayTab(firstTab) + " != " + displayTab(expectedResult));
+    }
+
+    @ParameterizedTest(name="Trier numéro {index}: nombre1={0}, résultat attendu = {1}")
+    @MethodSource("chargerJeuDeTestTrier")
+    void testTrier(int firstTab[], int expectedResult[]) throws IOException {
+        // Partie paramétrée
+        TriTableau monTri = new TriTableau();
+        monTri.trier(firstTab);
+        assertArrayEquals(expectedResult, firstTab, "test en échec pour le tri de " + displayTab(firstTab) + " != " + displayTab(expectedResult));
     }
 
 
@@ -86,7 +86,7 @@ public class TriTableauTest {
         for (int i = 0; i < tab.length - 1; i++)
         {
             result += tab[i];
-            if (i != tab.length - 1)
+            if (i != tab.length - 2)
             {
                 result += ",";
             }
